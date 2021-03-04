@@ -51,15 +51,17 @@
 
     <div id="content-section">
         <nav id="navbar" class="animate__animated animate__faster">
-            <a href="#matrix-title-content">Home</a>
-            <a>About</a>
-            <a>Patients</a>
-            <a>Clinicians</a>
-            <a>Patient Advocacy Groups</a>
-            <a>Researchers</a>
-            <a>Clients</a>
-            <a>Contact</a>
+            <a href="#content-section">Home</a>
+            <a href="#about-scroll-anchor">About</a>
+            <a href="#patient-scroll-anchor">Patients</a>
+            <a href="#clinicians-scroll-anchor">Clinicians</a>
+            <a href="#pag-scroll-anchor">Patient Advocacy Groups</a>
+            <a href="#researchers-scroll-anchor">Researchers</a>
+            <a href="#clients-scroll-anchor">Clients</a>
+            <a href="#contact-scroll-anchor">Contact</a>
         </nav>
+
+        <div class="scroll-anchor"></div>
 
         <div id="matrix-title-content">
             <img></img>
@@ -77,6 +79,7 @@
                 <img src="assets/PurpleBlock.svg">
             </div>
             <div class="about-text">
+                <div id="about-scroll-anchor" class="scroll-anchor"></div>
                 <h1>Insert Title Here</h1>
                 <p>The Across Healthcare team has had experience building many healthcare and 
                     research systems around the world, and they knew privacy, security, and 
@@ -90,6 +93,7 @@
 
         <div id="patient-title-content">
             <div class="patients-blurb">
+                <div id="patient-scroll-anchor" class="scroll-anchor"></div>
                 <p>Rare disease patients and caregivers were initially asked the 
                     open-ended question of, "What could we build to make your lives better?"
                     This prompted the following features in the real-world patient tools of Matrix:
@@ -110,6 +114,7 @@
         </div>
 
         <div id="clinicians-title-content">
+            <div id="clinicians-scroll-anchor" class="scroll-anchor"></div>
             <p>Typically, a rare disease patient has mutliple clinicians, and
                 Matrix helps bridge connectivity and continuity with all of them
                 by using the following methods and models:
@@ -152,6 +157,7 @@
         </div>
 
         <div id="pag-title-content" class="flex-column">
+            <div id="pag-scroll-anchor" class="scroll-anchor"></div>
             <img src="assets/Pag.svg">
             <div class="pag-info content-card">
                 <p>Patient Advocacy Groups can oversee and deploy Matrix within their respective 
@@ -173,6 +179,7 @@
         </div>
 
         <div id="researchers-title-content" class="flex-column">
+            <div id="researchers-scroll-anchor" class="scroll-anchor"></div>
             <img src="assets/Researchers.svg" class="green-line"></img>
             <p>Researchers can come from both academic and industry backgrounds. If approved, 
                 data feeds can be provided in a variety of industry formats and standards. Matrix 
@@ -184,6 +191,7 @@
 
         <div id="clients-title-content" class="flex-column">
             <div class="content-card quote-card">
+                <div id="clients-scroll-anchor" class="scroll-anchor"></div>
                 <img id="quotation-mark" src="assets/QuotationMark.svg"/>
                 <img id="mws-logo" src="assets/logos/MWS.png">
                 <p>"The MWS Foundation is grateful to Jason and Across Healthcare for making 
@@ -200,6 +208,7 @@
         </div>
 
         <div id="contact-title-content" class="flex-column">
+            <div id="contact-scroll-anchor" class="scroll-anchor"></div>
             <img src="assets/logos/AcrossLogo.png">
             <div class="content-card across-content">
                 <p>Across Healthcare has a clear vision to empower the entire rare disease community 
