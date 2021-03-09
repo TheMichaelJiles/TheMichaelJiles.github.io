@@ -17,7 +17,7 @@ var clientsContent = document.getElementById("clients-title-reveal");
 var contactContent = document.getElementById("contact-title-reveal");
 
 var titles = [matrix, about, patients, clinicians, pags, researchers, clients, contact];
-var content = [0, 
+var content = [Number.MIN_SAFE_INTEGER, 
     getPosition(aboutContent), 
     getPosition(patientContent), 
     getPosition(cliniciansContent), 
