@@ -1,4 +1,4 @@
-const interval = setInterval(fade, 250);
+const interval = setInterval(fade, 100);
 var matrix = document.getElementById("matrix-title");
 var about = document.getElementById("about-title");
 var patients = document.getElementById("patients-title");
@@ -27,36 +27,138 @@ var content = [0,
     getPosition(contactContent)];
 
 var currentIndex = 0;
+var currentTitleIndex = 0;
+var lastPosition = 0;
 var upper = 0;
 var lower = content[currentIndex + 1];
 var delta = 5;
 var isAnimating = false;
+var query = window.matchMedia("(max-width: 400px)");
+var scrollSpeed = 0;
 
+function setScrollSpeed() {
+    var currentPosition = document.documentElement.scrollTop;
+    scrollSpeed = Math.abs(lastPosition - currentPosition)
+    lastPosition = currentPosition
+}
 
-
-function fade() {
+function fadeMobile() {
     currentPosition = document.documentElement.scrollTop;
     if(currentPosition > lower + delta && !isAnimating) {
-        vanishUp(titles[currentIndex]);
+        vanishLeft(titles[currentIndex])
         currentIndex++;
         upper = lower;
-        showUp(titles[currentIndex]);
+        showRight(titles[currentIndex]);
         if (currentIndex + 1 >= content.length) {
             lower = Number.MAX_SAFE_INTEGER;
         } else {
             lower = content[currentIndex + 1]
         }
     } else if (currentPosition < upper - delta && !isAnimating) {
-        vanishDown(titles[currentIndex]);
+        vanishRight(titles[currentIndex]);
         currentIndex--;
         lower = upper;
-
-        showDown(titles[currentIndex]);
+        showLeft(titles[currentIndex]);
         upper = content[currentIndex];
     }
 }
 
+function fadeDesktop() {
+    currentPosition = document.documentElement.scrollTop
+    setScrollSpeed()
+    if(currentPosition > lower + delta) {
+        currentIndex++;
+        upper = lower;
+        
+        if (currentIndex + 1 >= content.length) {
+            lower = Number.MAX_SAFE_INTEGER;
+        } else {
+            lower = content[currentIndex + 1]
+        }
+    } else if (currentPosition < upper - delta) {
+        currentIndex--;
+        lower = upper;
+        upper = content[currentIndex];
+    }
+    if(!isAnimating && scrollSpeed < 140) {
+        if (currentTitleIndex < currentIndex) {
+            vanishUp(titles[currentTitleIndex])
+            showUp(titles[currentIndex])
+            currentTitleIndex = currentIndex;
+            console.log("Scroll " + scrollSpeed)
+        console.log("Vanish" + currentTitleIndex)
+        console.log("Show " + currentIndex)
+        } else if (currentTitleIndex > currentIndex) {
+            vanishDown(titles[currentTitleIndex])
+            showDown(titles[currentIndex])
+            currentTitleIndex = currentIndex;
+            console.log("Scroll " + scrollSpeed)
+        console.log("Vanish" + currentTitleIndex)
+        console.log("Show " + currentIndex)
+        }
+        
+    }
+}
 
+function fade() {
+    if(query.matches) {
+        fadeMobile()
+    } else {
+        fadeDesktop()
+    }
+}
+
+function showLeft(element) {
+    element.classList.add("animate__fadeInLeft");
+    element.classList.remove('hide');
+    isAnimating = true;
+    element.addEventListener('animationend', handleShowLeft);
+}
+
+function handleShowLeft() {
+    this.classList.remove("animate__fadeInLeft");
+    this.removeEventListener('animationend', handleShowLeft);
+    isAnimating = false;
+}
+
+function showRight(element) {
+    element.classList.add("animate__fadeInRight");
+    element.classList.remove('hide');
+    isAnimating = true;
+    element.addEventListener('animationend', handleShowRight);
+}
+
+function handleShowRight() {
+    this.classList.remove("animate__fadeInRight");
+    this.removeEventListener('animationend', handleShowRight);
+    isAnimating = false;
+}
+
+function vanishRight(element) {
+    element.classList.add("animate__fadeOutRight");
+    isAnimating = true;
+    element.addEventListener('animationend', handleVanishRight);
+}
+
+function handleVanishRight() {
+    this.classList.remove("animate__fadeOutRight");
+    this.classList.add('hide');
+    this.removeEventListener('animationend', handleVanishRight);
+    isAnimating = false;
+}
+
+function vanishLeft(element) {
+    element.classList.add("animate__fadeOutLeft");
+    isAnimating = true;
+    element.addEventListener('animationend', handleVanishLeft);
+}
+
+function handleVanishLeft() {
+    this.classList.remove("animate__fadeOutLeft");
+    this.classList.add('hide');
+    this.removeEventListener('animationend', handleVanishLeft);
+    isAnimating = false;
+}
 
 function vanishDown(element) {
     element.classList.add("animate__fadeOutDown");
