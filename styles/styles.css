@@ -1,4 +1,7 @@
 @media (min-device-width: 480px) {
+  .desktop-hide {
+    display: none !important;
+  }
   html {
     scroll-behavior: smooth;
   }

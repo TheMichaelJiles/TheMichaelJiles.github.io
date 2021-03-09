@@ -32,7 +32,7 @@ $gray: #3D3D3D;
     }
 
     p {
-        font-size: 1.2vw;
+        font-size: 2vh;
         color: $offblack;
         line-height: 1.5em;
         font-weight: 600;
@@ -40,7 +40,7 @@ $gray: #3D3D3D;
 
     ul {
         li {
-            font-size: 1.3vw;
+            font-size: 2vh;
             list-style: none;
             font-family: source-sans-pro, serif;
             font-weight: 600;
@@ -52,9 +52,69 @@ $gray: #3D3D3D;
             font-weight: bold;
             display: inline-block;
             width: 1em;
-            font-size: 2vw;
+            font-size: 3vh;
             margin-left: -1em;
         }
+    }
+
+    .hide-mobile-nav {
+        top: 0 !important;
+        left: -75vw !important;
+        
+    }
+
+    .open-button {
+        background-image: url("/assets/OpenNav.svg") !important;
+    }
+
+    .mobile-nav {
+        animation: nav-slide 0.2s ease-in-out;
+        @keyframes nav-slide {
+            from {
+                left: -75vw;
+            }
+            to {
+                left: 0vw;
+            }
+        }
+    }
+
+    #mobile-nav {
+        position: fixed;
+        top: 0;
+        height: 100vh;
+        width: 95vw;
+        z-index: 25;
+        .nav-background {
+            position: absolute;
+            height: 100vh;
+            width: 75vw;
+            background-color: $orange;
+            .link-container {
+                margin: 0 auto;
+                height: 80vh;
+                margin-top: 18vh;
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 4vh;
+                    text-align: center;
+                }
+            }
+        }
+        #mobile-nav-button {
+            position: absolute;
+            bottom: 2vh;
+            left: 74vw;
+            width: 20vw;
+            height: 20vw;
+            background-image: url("/assets/CloseNav.svg");
+            background-position: bottom left;
+            background-repeat: no-repeat;
+            background-size: 20vw;
+        }
+        
     }
 
     #title-section {
@@ -119,14 +179,19 @@ $gray: #3D3D3D;
         }
         #patients-title {
             margin: 0 auto;
+            margin-top: 3vh;
+            text-align: center;
             h1 {
                 font-family: source-serif-pro-semi, serif;
                 color: white;
-                font-size: 5.5vw;
+                font-size: 6vw;
                 line-height: 1em;
-                padding-bottom: 0.3em;
+                padding-bottom: 2vh;
                 border-bottom: 5px $orange solid;
                 margin: 0 auto;
+                span {
+                    font-size: 3.5vh;
+                }
             }
         }
     }
@@ -179,36 +244,37 @@ $gray: #3D3D3D;
             flex-direction: column;
             width: 100%;
             align-items: center;
+            margin-bottom: 5vh;
             .inline-blocks {
                 display: flex;
                 justify-content: space-between;
                 width: 100%;
                 margin-bottom: 0;
                 img {
-                    width: 15vw;
+                    width: 35vw;
                 }
             }
             .about-text {
                 position: relative;
-                width: 70%;
+                width: 90%;
                 #about-scroll-anchor {
                     top: -17vh;
                 }
                 h1 {
-                    font-size: 3vw;
+                    font-size: 5vh;
                     border-bottom: 0.1em black solid;
-                    width: 60%;
+                    width: 90%;
                     margin-bottom: 0;
                 }
                 p {
                     font-family: source-sans-pro, sans-serif;
                     font-weight: 600;
                     color: $gray;
-                    font-size: 1.5vw;
+                    font-size: 2.5vh;
                 }
             }
             img {
-                width: 17vw;
+                width: 40vw;
                 align-self: flex-end;
             }
         }
@@ -217,28 +283,28 @@ $gray: #3D3D3D;
             display: flex;
             width: 100%;
             flex-direction: column;
-            height: 90vh;
+            height: 115vh;
             align-items: center;
-            justify-content: space-evenly;
             margin-bottom: 10vh;
 
             background-image: url(/assets/GreenPlus.svg);
             background-repeat: no-repeat;
-            background-position: bottom right;
-            background-size: 22vw;
+            background-position: 160% 100%;
+            background-size: 70vw;
             .patients-blurb {
                 position: relative;
                 width: 80%;
                 border-radius: 10px;
                 background-color: $navy;
-                padding: 2vw;
+                padding: 2vh;
+                margin: 0 auto;
                 #patient-scroll-anchor {
-                    top: -10vh;
+                    top: -20vh;
                 }
                 p {
                     color: white;
                     font-weight: bold;
-                    font-size: 1.5vw;
+                    font-size: 2.5vh;
                     margin: 0;
                 }
             }
@@ -249,98 +315,113 @@ $gray: #3D3D3D;
 
         #clinicians-title-content {
             display: flex;
+            position: relative;
             flex-direction: column;
             align-items: center;
             width: 95%;
             margin: 0 auto;
             position: relative;
+            #clinicians-scroll-anchor {
+                position: absolute;
+                top: -15vh;
+            }
             p {
-                width: 80%;
+                width: 90%;
                 text-align: center;
-                font-size: 1.5vw;
+                font-size: 2.5vh;
                 color: $offblack;
                 line-height: 1.5em;
                 font-weight: 600;
             }
+            .mobile-column-reverse {
+                flex-direction: column-reverse !important;
+            }
             .clinician-block {
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 justify-content: space-evenly;
                 width: 100%;
                 margin-bottom: 5vh;
                 .clinician-card {
-                    width: 65%;
+                    width: 90%;
                     background-color: white;
                     border-radius: 10px;
                     box-shadow: 3px 3px 12px 7px rgba(177, 177, 177, 0.1);
-                    padding-left: 2vw;
+                    padding: 2vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                     h2 {
+                        margin-top: 1vh;
                         margin-bottom: 0;
+                        text-align: center;
+                        width: 90%;
                     }
                     .green-title {
                         color: $green;
                         border-bottom: 0.1em $green solid;
-                        width: 65%;
                     }
                     .orange-title {
                         color: $orange;
                         border-bottom: 0.1em $orange solid;
-                        width: 37%;
                     }
                     .purple-title {
                         color: $purple;
                         border-bottom: 0.1em $purple solid;
-                        width: 72%;
                     }
                     p {
-                        width: 95%;
+                        width: 90%;
                         text-align: left;
                         margin-top: 2vh;
                         color: $offblack;
-                        font-size: 1.2vw;
+                        font-size: 2vh;
                     }
                 }
                 img {
-                    width: 25%;
+                    width: 50%;
                 }
             }
         }
 
         #pag-title-content {
             position: relative;
+            margin-bottom: 15vh;
             #pag-scroll-anchor {
-                top: 15vh;
+                top: -5vh;
             }
             img {
-                width: 30%;
+                width: 60%;
                 margin: 0;
             }
             .pag-info {
                 width: 80%;
-                padding-left: 1vw;
-                padding-right: 1vw;
+                padding-left: 2vh;
+                padding-right: 2vh;
             }
             .pag-features {
-                width: 80%;
+                width: 90%;
             }
         }
 
         #researchers-title-content {
             width: 95%;
             margin: 0 auto;
-            height: 100vh;
+            margin-bottom: 15vh;
+            height: 60vh;
             position: relative;
             #researchers-scroll-anchor {
-                top: 5vh;
+                top: -15vh;
             }
             img {
                 width: 100%;
             }
             p {
-                width: 70%;
+                width: 80%;
+                text-align: center;
             }
             .green-line {
-                border-bottom: 0.5vw $green solid;
+                border-bottom: 1vw $green solid;
                 width: 100%;
             }
         }
@@ -348,57 +429,70 @@ $gray: #3D3D3D;
         #clients-title-content {
             width: 95%;
             margin: 0 auto;
-            height: 90vh;
+            height: 70vh;
             .quote-card {
                 position: relative;
-                width: 70%;
+                width: 85%;
                 padding-left: 1vw;
                 padding-right: 1vw;
                 #clients-scroll-anchor {
-                    top: -18vh;
+                    top: -25vh;
                 }
                 #quotation-mark {
                     position: absolute;
                     width: 20%;
-                    top: -6vh;
-                    right: 6vw;
+                    top: -3vh;
+                    right: 5vw;
                 }
                 #mws-logo {
-                    width: 50%;
-                    margin-top: 4vh;
+                    width: 60%;
+                    margin-top: 2vh;
+                    margin-left: 1vh;
+                }
+                p {
+                    padding-left: 2vh;
+                    padding-right: 2vh;
                 }
             }
 
             .client-logos {
-                height: 20vh;
+                height: 30vh;
                 display: flex;
                 align-items: center;
-                width: 80%;
+                width: 90%;
             }
         }
 
         #contact-title-content {
             width: 95%;
             height: 90vh;
+            margin: 0 auto;
+            position: relative;
+            #contact-scroll-anchor {
+                position: absolute;
+                top: -15vh;
+            }
             img {
-                width: 40%;
+                width: 80%;
             }
             .across-content {
                 background-color: #57833E;
                 text-align: center;
-                width: 70%;
+                width: 90%;
+                margin: 0;
                 p {
                     color: white;
                 }
             }
             h2 {
-                font-size: 1.3vw;
+                width: 90%;
+                font-size: 2vh;
                 font-weight: 600;
                 text-align: center;
                 margin: 0;
             }
             .contact-form {
-                width: 70%;
+                width: 90%;
                 .form_fields {
                     height: 100%;
                     width: 100%;

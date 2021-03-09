@@ -8,6 +8,10 @@ $gray: #3D3D3D;
 
 @media (min-device-width: 480px) {
 
+    .desktop-hide {
+        display: none !important;
+    }
+
     html {
         scroll-behavior: smooth;
     }

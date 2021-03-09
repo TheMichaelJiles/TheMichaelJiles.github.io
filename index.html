@@ -16,6 +16,23 @@
 </head>
 
 <body>
+    <div id="home-scroll-anchor"></div>
+
+    <nav id="mobile-nav" class="desktop-hide hide-mobile-nav">
+        <div class="nav-background">
+            <div class="link-container flex-column">
+                <a href="#home-scroll-anchor" onclick="toggleMobileNav()">Home</a>
+                <a href="#about-scroll-anchor" onclick="toggleMobileNav()">About</a>
+                <a href="#patient-scroll-anchor" onclick="toggleMobileNav()">Patients</a>
+                <a href="#clinicians-scroll-anchor" onclick="toggleMobileNav()">Clinicians</a>
+                <a href="#pag-scroll-anchor" onclick="toggleMobileNav()">Patient Advocacy Groups</a>
+                <a href="#researchers-scroll-anchor" onclick="toggleMobileNav()">Researchers</a>
+                <a href="#clients-scroll-anchor" onclick="toggleMobileNav()">Clients</a>
+                <a href="#contact-scroll-anchor" onclick="toggleMobileNav()">Contact</a>
+            </div>
+        </div>
+        <div id="mobile-nav-button" class="open-button" onclick="toggleMobileNav()"></div>
+    </nav>
 
     <div id="title-section">
         <div id="matrix-title" class="title-container animate__animated animate__faster">
@@ -27,7 +44,7 @@
             <h1>Started with the End in Mind</h1>
         </div>
         <div id="patients-title" class="title-container animate__animated animate__faster hide">
-            <h1><span>Patients</span><span class="orange"> &</span><br>
+            <h1><span>Patients</span><span class="orange"> & </span>
                 <span>Caregivers</span>
             </h1>
         </div>
@@ -119,7 +136,7 @@
                 Matrix helps bridge connectivity and continuity with all of them
                 by using the following methods and models:
             </p>
-            <div class="clinician-block">
+            <div class="mobile-column-reverse clinician-block">
                 <div class="clinician-card">
                     <h2 class="green-title">One Time Access Clinician</h2>
                     <p>Through the patient’s Sharing Center, Matrix allows for 
@@ -142,7 +159,7 @@
                         their entire patient population.</p>
                 </div>
             </div>
-            <div id="pag-title-reveal" class="clinician-block">
+            <div id="pag-title-reveal" class="mobile-column-reverse clinician-block">
                 <div class="clinician-card">
                     <h2 class="purple-title">Center of Excellence (COE) Clinician</h2>
                     <p>With maturity of a rare disease, there are typically global centers 
@@ -246,3 +263,4 @@
 <scipt src="owlcarousel/owl.carousel.min.js"></scipt>
 <script src="js/script.js"></script>
 <script src="js/navbar.js"></script>
+<script src="js/mobile-navbar.js"></script>

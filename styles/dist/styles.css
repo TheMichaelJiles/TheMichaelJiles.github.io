@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @media (min-device-width: 480px) {
+  .desktop-hide {
+    display: none !important;
+  }
+
   html {
     scroll-behavior: smooth;
   }

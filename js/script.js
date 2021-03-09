@@ -43,27 +43,36 @@ function setScrollSpeed() {
 }
 
 function fadeMobile() {
-    currentPosition = document.documentElement.scrollTop;
-    if(currentPosition > lower + delta && !isAnimating) {
-        vanishLeft(titles[currentIndex])
-        currentIndex++;
-        upper = lower;
-        showRight(titles[currentIndex]);
-        if (currentIndex + 1 >= content.length) {
-            lower = Number.MAX_SAFE_INTEGER;
-        } else {
-            lower = content[currentIndex + 1]
+    if(!isAnimating && scrollSpeed < 140) {
+        if (currentTitleIndex < currentIndex) {
+            vanishLeft(titles[currentTitleIndex])
+            showRight(titles[currentIndex])
+            currentTitleIndex = currentIndex;
+        } else if (currentTitleIndex > currentIndex) {
+            vanishRight(titles[currentTitleIndex])
+            showLeft(titles[currentIndex])
+            currentTitleIndex = currentIndex;
         }
-    } else if (currentPosition < upper - delta && !isAnimating) {
-        vanishRight(titles[currentIndex]);
-        currentIndex--;
-        lower = upper;
-        showLeft(titles[currentIndex]);
-        upper = content[currentIndex];
+        
     }
 }
 
 function fadeDesktop() {
+    if(!isAnimating && scrollSpeed < 140) {
+        if (currentTitleIndex < currentIndex) {
+            vanishUp(titles[currentTitleIndex])
+            showUp(titles[currentIndex])
+            currentTitleIndex = currentIndex;
+        } else if (currentTitleIndex > currentIndex) {
+            vanishDown(titles[currentTitleIndex])
+            showDown(titles[currentIndex])
+            currentTitleIndex = currentIndex;
+        }
+        
+    }
+}
+
+function fade() {
     currentPosition = document.documentElement.scrollTop
     setScrollSpeed()
     if(currentPosition > lower + delta) {
@@ -80,27 +89,6 @@ function fadeDesktop() {
         lower = upper;
         upper = content[currentIndex];
     }
-    if(!isAnimating && scrollSpeed < 140) {
-        if (currentTitleIndex < currentIndex) {
-            vanishUp(titles[currentTitleIndex])
-            showUp(titles[currentIndex])
-            currentTitleIndex = currentIndex;
-            console.log("Scroll " + scrollSpeed)
-        console.log("Vanish" + currentTitleIndex)
-        console.log("Show " + currentIndex)
-        } else if (currentTitleIndex > currentIndex) {
-            vanishDown(titles[currentTitleIndex])
-            showDown(titles[currentIndex])
-            currentTitleIndex = currentIndex;
-            console.log("Scroll " + scrollSpeed)
-        console.log("Vanish" + currentTitleIndex)
-        console.log("Show " + currentIndex)
-        }
-        
-    }
-}
-
-function fade() {
     if(query.matches) {
         fadeMobile()
     } else {
@@ -228,11 +216,12 @@ function getPosition( el ) {
 
 var owl = $('.owl-carousel');
 owl.owlCarousel({
-    items:3,
+    items:2,
     loop:true,
     center: true,
     margin:10,
     autoplay:true,
     autoplayTimeout:1000,
-    autoplayHoverPause:true
+    autoplayHoverPause:true,
+    responsiveClass: true,
 });
