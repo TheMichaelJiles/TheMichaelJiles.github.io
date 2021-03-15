@@ -3,7 +3,7 @@ var navbar = document.getElementById("navbar");
 var lastScrollTop = 0;
 var ndelta = 10;
 
-const navinterval = setInterval(setnav, 100);
+//const navinterval = setInterval(setnav, 100);
 
 function setnav() {
     var nowScrollTop = $(this).scrollTop();
