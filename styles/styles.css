@@ -91,7 +91,7 @@
   #title-section .title-container {
     left: 2vw;
     position: fixed;
-    width: 25vw;
+    width: 27vw;
     font-family: source-serif-pro, serif;
     color: white;
   }
@@ -106,22 +106,28 @@
     padding-bottom: 2vh;
     padding-left: 1vw;
   }
+  #title-section #matrix-logo {
+    width: 8vw;
+    position: absolute;
+    right: 2vh;
+    top: 2vh;
+  }
   #title-section #matrix-title {
     font-family: source-serif-pro, serif;
   }
   #title-section #matrix-title h1 {
-    width: 80%;
+    width: 90%;
     margin: 0;
     border-bottom: 0.1em #F5A623 solid;
   }
   #title-section #matrix-title h1 .matrix-header {
     font-family: source-serif-pro-semi, serif;
     font-style: normal;
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
   #title-section #matrix-title h1 .matrix-phonetics {
     font-weight: 400;
-    font-size: 1.6vw;
+    font-size: 1.5vw;
     color: #F5A623;
   }
   #title-section #matrix-title h2 {
@@ -130,13 +136,13 @@
     color: #F5A623;
     font-weight: 400;
     font-style: italic;
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
   #title-section #matrix-title p {
     margin: 0;
     margin-left: 15px;
     color: white;
-    font-size: 1.5vw;
+    font-size: 1vw;
     width: 80%;
   }
   #title-section #patients-title h1 {
@@ -151,7 +157,6 @@
     width: 70vw;
     margin: 0;
     margin-left: 30vw;
-    background-color: #FAFAFA;
   }
   #content-section nav {
     width: 70vw;
@@ -308,6 +313,7 @@
     top: -10vh;
   }
   #content-section #patient-title-content .patients-blurb p {
+    text-align: center;
     color: white;
     font-weight: bold;
     font-size: 1.5vw;
