@@ -1,6 +1,5 @@
 const interval = setInterval(fade, 100);
 var matrix = document.getElementById("matrix-title");
-var about = document.getElementById("about-title");
 var patients = document.getElementById("patients-title");
 var clinicians = document.getElementById("clinicians-title");
 var pags = document.getElementById("pag-title");
@@ -8,7 +7,6 @@ var researchers = document.getElementById("researchers-title");
 var clients = document.getElementById("clients-title");
 var contact = document.getElementById("contact-title");
 
-var aboutContent = document.getElementById("about-title-reveal");
 var patientContent = document.getElementById("patient-title-reveal");
 var cliniciansContent = document.getElementById("clinicians-title-reveal");
 var pagContent = document.getElementById("pag-title-reveal");
@@ -16,9 +14,8 @@ var researchersContent = document.getElementById("researchers-title-reveal");
 var clientsContent = document.getElementById("clients-title-reveal");
 var contactContent = document.getElementById("contact-title-reveal");
 
-var titles = [matrix, about, patients, clinicians, pags, researchers, clients, contact];
+var titles = [matrix, patients, clinicians, pags, researchers, clients, contact];
 var content = [Number.MIN_SAFE_INTEGER, 
-    getPosition(aboutContent), 
     getPosition(patientContent), 
     getPosition(cliniciansContent), 
     getPosition(pagContent),

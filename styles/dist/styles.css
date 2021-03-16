@@ -178,12 +178,12 @@
   }
   #content-section #matrix-title-content .landing-design {
     width: 100%;
-    height: 60vh;
+    height: 50vh;
     border: none;
   }
   #content-section #matrix-title-content .co-create-container {
     width: 100%;
-    height: 18vh;
+    height: 30vh;
     background-color: #F5A623;
   }
   #content-section #matrix-title-content .co-create-container h2 {
@@ -195,14 +195,23 @@
     height: 7vh;
     margin: 0;
   }
-  #content-section #matrix-title-content .co-create-container h3 {
-    text-align: center;
+  #content-section #matrix-title-content .co-create-container .landing-header-container {
+    display: flex;
+    align-items: baseline;
+    width: 90%;
+  }
+  #content-section #matrix-title-content .co-create-container .landing-header-container .landing-header {
     color: white;
-    font-weight: 600;
-    font-size: 1.3vw;
-    margin: 0;
+    text-align: center;
+  }
+  #content-section #matrix-title-content .co-create-container .landing-header-container .landing-header h3 {
     border-bottom: 0.1em white solid;
-    width: 8vw;
+    width: 80%;
+    margin-bottom: 1vh;
+  }
+  #content-section #matrix-title-content .co-create-container .landing-header-container .landing-header h4 {
+    margin-top: 0;
+    font-size: 1vw;
   }
   #content-section #matrix-title-content .co-create-container .down-arrow {
     width: 2vw;
@@ -253,10 +262,6 @@
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 10vh;
-    background-image: url(/assets/GreenPlus.svg);
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    background-size: 22vw;
   }
   #content-section #patient-title-content .patients-blurb {
     position: relative;
@@ -345,10 +350,11 @@
   }
   #content-section #clinicians-title-content .clinician-features {
     width: 80%;
+    margin-bottom: 5vh;
   }
   #content-section #pag-title-content {
     position: relative;
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
   }
   #content-section #pag-title-content #pag-scroll-anchor {
     top: 15vh;
@@ -359,6 +365,8 @@
   }
   #content-section #pag-title-content .pag-info {
     width: 80%;
+    background-color: #13293D;
+    color: white;
     padding-left: 1vw;
     padding-right: 1vw;
     text-align: center;
@@ -369,7 +377,7 @@
   #content-section #researchers-title-content {
     width: 95%;
     margin: 0 auto;
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
     height: 100vh;
     position: relative;
   }
@@ -380,7 +388,6 @@
     width: 100%;
   }
   #content-section #researchers-title-content .content-card {
-    height: 10vh;
     width: 70%;
   }
   #content-section #researchers-title-content h2 {
@@ -389,6 +396,7 @@
     text-align: center;
     width: 90%;
     color: #232323;
+    padding: 1vh;
   }
   #content-section #researchers-title-content .researcher-features {
     width: 70%;
@@ -430,6 +438,11 @@
     align-items: center;
     width: 80%;
   }
+  #content-section #clients-title-content .client-logos img {
+    height: 20vh;
+    width: auto;
+    margin: 0 auto;
+  }
   #content-section #contact-title-content {
     width: 95%;
     height: 90vh;
@@ -464,6 +477,9 @@
     align-items: center;
     font-family: raleway, sans-serif;
   }
+  #content-section #contact-title-content .contact-form .form_fields input {
+    background-color: #FAFAFA;
+  }
   #content-section #contact-title-content .contact-form .form_fields .upper_form {
     width: 45%;
     height: 4vh;
@@ -493,6 +509,7 @@
     margin: 1px;
     border: 0;
     resize: none;
+    background-color: #FAFAFA;
   }
   #content-section #contact-title-content .contact-form .form_fields textarea::placeholder {
     font-family: raleway, sans-serif;

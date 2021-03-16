@@ -69,7 +69,6 @@
 
     <div id="content-section">
         <nav id="navbar" class="mobile-hide animate__animated animate__faster">
-            <a href="#about-scroll-anchor">About</a>
             <a href="#patient-scroll-anchor">Patients/Caregivers</a>
             <a href="#clinicians-scroll-anchor">Clinicians</a>
             <a href="#pag-scroll-anchor">Foundations</a>
@@ -82,29 +81,31 @@
 
         <div id="matrix-title-content">
             <img class="landing-design" src="assets/LandingDesign.svg"></img>
-            <div class="co-create-container flex-column">
+            <div id="patient-title-reveal" class="co-create-container flex-column">
                 <h2>CO-CREATE & CO-DELIVER CARE</h2>
-                <h3>Learn More</h3>
-                <a href="#about-scroll-anchor"><img src="assets/DownArrow.svg" class="down-arrow"/></a>
+                <div class="landing-header-container">
+                    <div class="landing-header flex-column">
+                        <h3>Patients/Caregivers</h3>
+                        <h4>Manage your own health and/or the health of others</h4>
+                        <a href="#patient-scroll-anchor"><img src="assets/DownArrow.svg" class="down-arrow"></a>
+                    </div>
+                    <div class="landing-header flex-column">
+                        <h3>Clinicians</h3>
+                        <h4>Interact more closely with patients and expand your insights</h4>
+                        <a href="#clinicians-scroll-anchor"><img src="assets/DownArrow.svg" class="down-arrow"></a>
+                    </div>
+                    <div class="landing-header flex-column">
+                        <h3>Foundations</h3>
+                        <h4>Empower your community and deliver beneficial collaboration</h4>
+                        <a href="#pag-scroll-anchor"><img src="assets/DownArrow.svg" class="down-arrow"></a>
+                    </div>
+                    <div class="landing-header flex-column">
+                        <h3>Researchers</h3>
+                        <h4>Integrate into the community and easily facilitate new trials/studies</h4>
+                        <a href="#researchers-scroll-anchor"><img src="assets/DownArrow.svg" class="down-arrow"></a>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div id="about-title-content">
-            <div id="about-title-reveal" class="inline-blocks">
-                <img src="assets/OrangeBlock.svg">
-                <img src="assets/PurpleBlock.svg">
-            </div>
-            <div class="about-text">
-                <div id="about-scroll-anchor" class="scroll-anchor"></div>
-                <h1>Insert Title Here</h1>
-                <p>The Across Healthcare team has had experience building many healthcare and 
-                    research systems around the world, and they knew privacy, security, and 
-                    regulatory compliance needed to be of top importance; therefore, Matrix is 
-                    HIPAA, GDPR, and 21 CFR Part 11<sup>2</sup> compliant. Many other aspects such as 
-                    internationalization, accessibility, and interoperability are accounted for 
-                    at the core of the Matrix architecture.</p>
-            </div>
-            <img id="patient-title-reveal" src="assets/GreenBlock.svg">
         </div>
 
         <div id="patient-title-content">
@@ -131,6 +132,24 @@
 
         <div id="clinicians-title-content">
             <div id="clinicians-scroll-anchor" class="scroll-anchor"></div>
+            <div class="content-card clinician-header">
+                <h2>Matrix can allow you to interact closely with your patients</h2>
+            </div>
+            <div class="clinician-features">
+                <ul id="pag-title-reveal">
+                    <li>Access patient data through several available options: 
+                        <ol>
+                            <li>A link and security code via a patient's sharing center.</li>
+                            <li>A direct login to Matrix where you can see all your patients.</li>
+                            <li>An embedded app within your electronic health record.</li>
+                        </ol>    
+                    ​</li>
+                    <li>Have real-time communication with patients</li>
+                    <li>View aggregated population analytics for all your patients</li>
+                    <li>Collect data for a trial/study via Matrix</li>
+                    <li>Receive educational materials from foundations and researchers to stay up to date on the latest evidence</li>
+                </ul>
+            </div>
             <p>Typically, a rare disease patient has mutliple clinicians, and
                 Matrix helps bridge connectivity and continuity with all of them
                 by using the following methods and models:
@@ -170,31 +189,13 @@
                 </div>
                 <img src="assets/Laptop.svg"></img>
             </div>
-            <div class="content-card clinician-header">
-                <h2>Matrix can allow you to interact closely with your patients</h2>
-            </div>
-            <div class="clinician-features">
-                <ul id="pag-title-reveal">
-                    <li>Access patient data through several available options: 
-                        <ol>
-                            <li>A link and security code via a patient's sharing center.</li>
-                            <li>A direct login to Matrix where you can see all your patients.</li>
-                            <li>An embedded app within your electronic health record.</li>
-                        </ol>    
-                    ​</li>
-                    <li>Have real-time communication with patients</li>
-                    <li>View aggregated population analytics for all your patients</li>
-                    <li>Collect data for a trial/study via Matrix</li>
-                    <li>Receive educational materials from foundations and researchers to stay up to date on the latest evidence</li>
-                </ul>
-            </div>
         </div>
 
         <div id="pag-title-content" class="flex-column">
             <div id="pag-scroll-anchor" class="scroll-anchor"></div>
             <img src="assets/Pag.svg">
             <div class="pag-info content-card">
-                <p>Matrix will empower your community and deliver collaboration</p>
+                <h2>Matrix will empower your community and deliver collaboration</h2>
             </div>
             <div class="pag-features">
                 <ul>
@@ -215,7 +216,7 @@
             <img src="assets/Researchers.svg" class="green-line"></img>
             <div class="content-card">
                 <h2>Matrix can integrate into your 
-                patient and investigator netowrk 
+                patient and investigator network 
                 and allows for easy setup of trial/study.</h2>
             </div>
             <div class="researcher-features">
@@ -246,6 +247,7 @@
             <div id="contact-title-reveal" class="owl-carousel client-logos">
                 <img src="assets/logos/MWS_Gray.png">
                 <img src="assets/logos/PMSF_Gray.png">
+                <img src="assets/logos/AvalonLogo-01.png">
             </div>
         </div>
 
@@ -270,7 +272,7 @@
                     <input type="text" class="upper_form" name="organization"placeholder=" Organization*" required>
                     <input type="text" class="upper_form" name="role" placeholder=" Role*" required>
                     <input type="text" class="upper_form" name="emailaddress" placeholder=" Email*" required>
-                    <input type="text" class="upper_form" name="ehrsystem" placeholder=" EHR System*" required>
+                    <input type="text" class="upper_form" name="country" placeholder=" Country*" required>
                     <textarea type="text" name="message" placeholder=" Additional Information*"></textarea>
                     <input type="hidden" name="formtype" value="Demo" />
                   </div>
