@@ -218,39 +218,59 @@ $gray: #3D3D3D;
         #matrix-title-content {
             display: flex;
             width: 100%;
-            height: 85vh;
             margin: 0 auto;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
             justify-content: space-evenly;
+            margin-bottom: 10vh;
             .landing-design {
                 width: 95%;
                 border: none;
+                margin-top: 10vh;
+                margin-bottom: 10vh;
             }
             .co-create-container {
                 width: 100%;
-                height: 15vh;
+                height: auto;
                 background-color: $orange;
                 h2 {
                     color: white;
                     font-weight: 900;
-                    font-size: 2.5vh;
+                    width: 95%;
+                    font-size: 5.5vh;
                     text-align: center;
                     padding: 0;
+                    height: 7vh;
                     margin: 0;
+                    margin-top: 5vh;
+                    margin-bottom: 10vh;
                 }
-                h3 {
-                    text-align: center;
-                    color: white;
-                    font-weight: 600;
-                    font-size: 2vh;
-                    margin: 0;
-                    border-bottom: 0.1em white solid;
-                    width: 35vw;
+                .landing-header-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 95%;
+                    .landing-header {
+                        color: white;
+                        text-align: center;
+                        width: 100%;
+                        margin-bottom: 5vh;
+                        h3{
+                            border-bottom: 0.1em white solid;
+                            width: 70%;
+                            margin-bottom: 1vh;
+                            font-size: 3vh;
+                        }
+                        h4 {
+                            width: 70%;
+                            margin-top: 0;
+                            font-size: 2vh;
+                        }
+                    }
                 }
                 .down-arrow {
-                    width: 7vw;
+                    width: 4vh;
                 }
             }
         }
@@ -428,6 +448,11 @@ $gray: #3D3D3D;
                 width: 80%;
                 padding-left: 2vh;
                 padding-right: 2vh;
+                color: white;
+                background-color: $navy;
+                text-align: center;
+                font-size: 1.5vh;
+
             }
             .pag-features {
                 width: 90%;
@@ -474,6 +499,7 @@ $gray: #3D3D3D;
             width: 95%;
             margin: 0 auto;
             height: 70vh;
+            margin-bottom: 10vh;
             .quote-card {
                 position: relative;
                 width: 85%;

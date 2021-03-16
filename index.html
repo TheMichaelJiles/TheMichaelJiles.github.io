@@ -21,19 +21,19 @@
     <nav id="mobile-nav" class="desktop-hide hide-mobile-nav">
         <div class="nav-background">
             <div class="link-container flex-column">
-                <a href="#content-section" onclick="toggleMobileNav()">Home</a>
-                <a href="#about-scroll-anchor" onclick="toggleMobileNav()">About</a>
-                <a href="#patient-scroll-anchor" onclick="toggleMobileNav()">Patients&<br>Caregivers</a>
+                <a href="#home-scroll-anchor" onclick="toggleMobileNav()">Home</a>
+                <a href="#patient-scroll-anchor" onclick="toggleMobileNav()">Patients &<br>Caregivers</a>
                 <a href="#clinicians-scroll-anchor" onclick="toggleMobileNav()">Clinicians</a>
                 <a href="#pag-scroll-anchor" onclick="toggleMobileNav()">Foundations</a>
                 <a href="#researchers-scroll-anchor" onclick="toggleMobileNav()">Researchers</a>
                 <a href="#clients-scroll-anchor" onclick="toggleMobileNav()">Partners</a>
                 <a href="#contact-scroll-anchor" onclick="toggleMobileNav()">Contact</a>
+                <a href="video.html">Watch Demo</a>
             </div>
         </div>
         <div id="mobile-nav-button" class="open-button" onclick="toggleMobileNav()"></div>
     </nav>
-
+    <div id="home-scroll-anchor"></div>
     <div id="title-section">
         <a href="#content-section"><img src="/assets/MatrixLogo.svg" id="matrix-logo" /></a>
         <div id="matrix-title" class="title-container animate__animated animate__faster">
@@ -53,7 +53,7 @@
             <h1>Clinicians</h1>
         </div>
         <div id="pag-title" class="title-container title-default animate__animated animate__faster hide">
-            <h1 style="font-size: 4.1vw;">Foundations</h1>
+            <h1>Foundations</h1>
         </div>
         <div id="researchers-title" class="title-container title-default animate__animated animate__faster hide">
             <h1>Researchers</h1>
@@ -137,7 +137,7 @@
                 <h2>Matrix can allow you to interact closely with your patients</h2>
             </div>
             <div class="clinician-features">
-                <ul id="pag-title-reveal">
+                <ul>
                     <li>Access patient data through several available options: 
                         <ol>
                             <li>A link and security code via a patient's sharing center.</li>
@@ -179,7 +179,7 @@
                 </div>
             </div>
             <div class="mobile-column-reverse clinician-block">
-                <div class="clinician-card">
+                <div id="pag-title-reveal" class="clinician-card">
                     <h2 class="purple-title">Center of Excellence (COE) Clinician</h2>
                     <p>With maturity of a rare disease, there are typically global centers 
                         of excellence with leading Clinicians. At these COE sites, Matrix 

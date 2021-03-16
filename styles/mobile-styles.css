@@ -227,7 +227,6 @@
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    height: 85vh;
     margin: 0 auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -242,35 +241,63 @@
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    margin-bottom: 10vh;
   }
   #content-section #matrix-title-content .landing-design {
     width: 95%;
     border: none;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
   }
   #content-section #matrix-title-content .co-create-container {
     width: 100%;
-    height: 15vh;
+    height: auto;
     background-color: #F5A623;
   }
   #content-section #matrix-title-content .co-create-container h2 {
     color: white;
     font-weight: 900;
-    font-size: 2.5vh;
+    width: 95%;
+    font-size: 5.5vh;
     text-align: center;
     padding: 0;
+    height: 7vh;
     margin: 0;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
   }
-  #content-section #matrix-title-content .co-create-container h3 {
-    text-align: center;
+  #content-section #matrix-title-content .co-create-container .landing-header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 95%;
+  }
+  #content-section #matrix-title-content .co-create-container .landing-header-container .landing-header {
     color: white;
-    font-weight: 600;
-    font-size: 2vh;
-    margin: 0;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5vh;
+  }
+  #content-section #matrix-title-content .co-create-container .landing-header-container .landing-header h3 {
     border-bottom: 0.1em white solid;
-    width: 35vw;
+    width: 70%;
+    margin-bottom: 1vh;
+    font-size: 3vh;
+  }
+  #content-section #matrix-title-content .co-create-container .landing-header-container .landing-header h4 {
+    width: 70%;
+    margin-top: 0;
+    font-size: 2vh;
   }
   #content-section #matrix-title-content .co-create-container .down-arrow {
-    width: 7vw;
+    width: 4vh;
   }
   #content-section #about-title-content {
     display: -webkit-box;
@@ -488,6 +515,10 @@
     width: 80%;
     padding-left: 2vh;
     padding-right: 2vh;
+    color: white;
+    background-color: #13293D;
+    text-align: center;
+    font-size: 1.5vh;
   }
   #content-section #pag-title-content .pag-features {
     width: 90%;
@@ -531,6 +562,7 @@
     width: 95%;
     margin: 0 auto;
     height: 70vh;
+    margin-bottom: 10vh;
   }
   #content-section #clients-title-content .quote-card {
     position: relative;
