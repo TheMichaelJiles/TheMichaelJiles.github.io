@@ -175,6 +175,15 @@ $gray: #3D3D3D;
                 text-decoration: none;
                 color: black;
             }
+            .demo-button {
+                background-color: $orange;
+                padding: 1vh;
+                border-radius: 5px;
+                color: white;
+            }
+            .demo-button:hover {
+                background-color: rgb(207, 112, 24);
+            }
         }
 
         #matrix-title-content {
@@ -304,6 +313,9 @@ $gray: #3D3D3D;
             width: 95%;
             margin: 0 auto;
             position: relative;
+            #clinicians-scroll-anchor {
+                top: -10vh;
+            }
             p {
                 width: 80%;
                 text-align: center;
@@ -397,7 +409,7 @@ $gray: #3D3D3D;
             height: 100vh;
             position: relative;
             #researchers-scroll-anchor {
-                top: 5vh;
+                top: -8vh;
             }
             img {
                 width: 100%;

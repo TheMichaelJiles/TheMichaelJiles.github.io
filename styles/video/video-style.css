@@ -1,0 +1,40 @@
+@media (min-device-width: 480px) {
+  body {
+    background-color: #0f0f0f;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  body #video-player-container {
+    width: 100vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body #video-player-container .close-button {
+    color: white;
+    font-family: "raleway", sans-serif;
+    font-weight: 900;
+    font-size: 3vw;
+    margin-bottom: 10vh;
+    text-decoration: none;
+  }
+  body #video-player-container .close-button:hover {
+    cursor: pointer;
+  }
+  body #video-player-container .video-player {
+    width: 60vw;
+  }
+}
+/*# sourceMappingURL=video-style.css.map */

@@ -166,6 +166,15 @@
     text-decoration: none;
     color: black;
   }
+  #content-section nav .demo-button {
+    background-color: #F5A623;
+    padding: 1vh;
+    border-radius: 5px;
+    color: white;
+  }
+  #content-section nav .demo-button:hover {
+    background-color: #cf7018;
+  }
   #content-section #matrix-title-content {
     display: flex;
     width: 100%;
@@ -291,6 +300,9 @@
     margin: 0 auto;
     position: relative;
   }
+  #content-section #clinicians-title-content #clinicians-scroll-anchor {
+    top: -10vh;
+  }
   #content-section #clinicians-title-content p {
     width: 80%;
     text-align: center;
@@ -382,7 +394,7 @@
     position: relative;
   }
   #content-section #researchers-title-content #researchers-scroll-anchor {
-    top: 5vh;
+    top: -8vh;
   }
   #content-section #researchers-title-content img {
     width: 100%;
