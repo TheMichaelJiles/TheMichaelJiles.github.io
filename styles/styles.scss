@@ -196,9 +196,10 @@ $gray: #3D3D3D;
             align-items: center;
             justify-content: space-evenly;
             .landing-design {
-                width: 100%;
-                height: 50vh;
+                width: 70%;
                 border: none;
+                margin-top: 5vh;
+                margin-bottom: 5vh;
             }
             .co-create-container {
                 width: 100%;
@@ -328,7 +329,7 @@ $gray: #3D3D3D;
                 display: flex;
                 align-items: center;
                 justify-content: space-evenly;
-                width: 100%;
+                width: 85%;
                 margin-bottom: 5vh;
                 .clinician-card {
                     width: 65%;
