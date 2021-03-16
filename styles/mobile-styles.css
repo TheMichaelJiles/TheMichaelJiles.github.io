@@ -354,13 +354,14 @@
     top: -20vh;
   }
   #content-section #patient-title-content .patients-blurb p {
+    text-align: center;
     color: white;
     font-weight: bold;
-    font-size: 2.5vh;
+    font-size: 2.3vh;
     margin: 0;
   }
   #content-section #patient-title-content .patient-features {
-    width: 80%;
+    width: 90%;
   }
   #content-section #clinicians-title-content {
     display: -webkit-box;
@@ -459,6 +460,19 @@
   #content-section #clinicians-title-content .clinician-block img {
     width: 50%;
   }
+  #content-section #clinicians-title-content .clinician-header {
+    color: white;
+    text-align: center;
+    font-size: 1.5vh;
+    background-color: #13293D;
+    width: 90%;
+  }
+  #content-section #clinicians-title-content .clinician-header h2 {
+    text-align: center;
+  }
+  #content-section #clinicians-title-content .clinician-features {
+    width: 95%;
+  }
   #content-section #pag-title-content {
     position: relative;
     margin-bottom: 15vh;
@@ -482,7 +496,7 @@
     width: 95%;
     margin: 0 auto;
     margin-bottom: 15vh;
-    height: 60vh;
+    height: 80vh;
     position: relative;
   }
   #content-section #researchers-title-content #researchers-scroll-anchor {
@@ -491,9 +505,23 @@
   #content-section #researchers-title-content img {
     width: 100%;
   }
-  #content-section #researchers-title-content p {
-    width: 80%;
+  #content-section #researchers-title-content .content-card {
+    width: 90%;
+  }
+  #content-section #researchers-title-content .content-card h2 {
+    margin: 0 auto;
+    font-size: 2vh;
+    padding: 1vw;
+    margin-top: 1vh;
     text-align: center;
+    width: 90%;
+    color: #232323;
+  }
+  #content-section #researchers-title-content .researcher-features {
+    width: 95%;
+  }
+  #content-section #researchers-title-content .researcher-features li::before {
+    color: #75BD25;
   }
   #content-section #researchers-title-content .green-line {
     border-bottom: 1vw #75BD25 solid;

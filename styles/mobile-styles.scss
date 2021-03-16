@@ -319,14 +319,15 @@ $gray: #3D3D3D;
                     top: -20vh;
                 }
                 p {
+                    text-align: center;
                     color: white;
                     font-weight: bold;
-                    font-size: 2.5vh;
+                    font-size: 2.3vh;
                     margin: 0;
                 }
             }
             .patient-features {
-                width: 80%;
+                width: 90%;
             }
         }
 
@@ -399,6 +400,19 @@ $gray: #3D3D3D;
                     width: 50%;
                 }
             }
+            .clinician-header {
+                color: white;
+                text-align: center;
+                font-size: 1.5vh;
+                background-color: $navy;
+                width: 90%;
+                h2 {
+                    text-align: center;
+                }
+            }
+            .clinician-features {
+                width: 95%;
+            }
         }
 
         #pag-title-content {
@@ -425,7 +439,7 @@ $gray: #3D3D3D;
             width: 95%;
             margin: 0 auto;
             margin-bottom: 15vh;
-            height: 60vh;
+            height: 80vh;
             position: relative;
             #researchers-scroll-anchor {
                 top: -15vh;
@@ -433,9 +447,23 @@ $gray: #3D3D3D;
             img {
                 width: 100%;
             }
-            p {
-                width: 80%;
-                text-align: center;
+            .content-card {
+                width: 90%;
+                h2 {
+                    margin: 0 auto;
+                    font-size: 2vh;
+                    padding: 1vw;
+                    margin-top: 1vh;
+                    text-align: center;
+                    width: 90%;
+                    color: $offblack;
+                }
+            }
+            .researcher-features {
+                width: 95%;
+                li::before{
+                    color: $green;
+                }
             }
             .green-line {
                 border-bottom: 1vw $green solid;

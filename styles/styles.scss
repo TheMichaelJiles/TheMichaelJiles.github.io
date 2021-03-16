@@ -350,10 +350,21 @@ $gray: #3D3D3D;
                     width: 25%;
                 }
             }
+            .clinician-header {
+                color: white;
+                text-align: center;
+                font-size: 1.2vw;
+                background-color: $navy;
+                width: 90%;
+            }
+            .clinician-features {
+                width: 80%;
+            }
         }
 
         #pag-title-content {
             position: relative;
+            margin-bottom: 20vh;
             #pag-scroll-anchor {
                 top: 15vh;
             }
@@ -375,6 +386,7 @@ $gray: #3D3D3D;
         #researchers-title-content {
             width: 95%;
             margin: 0 auto;
+            margin-bottom: 20vh;
             height: 100vh;
             position: relative;
             #researchers-scroll-anchor {

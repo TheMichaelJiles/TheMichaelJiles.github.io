@@ -336,8 +336,19 @@
   #content-section #clinicians-title-content .clinician-block img {
     width: 25%;
   }
+  #content-section #clinicians-title-content .clinician-header {
+    color: white;
+    text-align: center;
+    font-size: 1.2vw;
+    background-color: #13293D;
+    width: 90%;
+  }
+  #content-section #clinicians-title-content .clinician-features {
+    width: 80%;
+  }
   #content-section #pag-title-content {
     position: relative;
+    margin-bottom: 20vh;
   }
   #content-section #pag-title-content #pag-scroll-anchor {
     top: 15vh;
@@ -358,6 +369,7 @@
   #content-section #researchers-title-content {
     width: 95%;
     margin: 0 auto;
+    margin-bottom: 20vh;
     height: 100vh;
     position: relative;
   }
