@@ -312,14 +312,14 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 90vh;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    margin-bottom: 10vh;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
   }
   #content-section #patient-title-content .patients-blurb {
     position: relative;
@@ -340,6 +340,10 @@
   }
   #content-section #patient-title-content .patient-features {
     width: 80%;
+    margin-bottom: 5vh;
+  }
+  #content-section #patient-title-content img {
+    width: 70%;
   }
   #content-section #clinicians-title-content {
     display: -webkit-box;

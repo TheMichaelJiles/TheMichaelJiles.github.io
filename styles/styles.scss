@@ -281,10 +281,10 @@ $gray: #3D3D3D;
             display: flex;
             width: 100%;
             flex-direction: column;
-            height: 90vh;
             align-items: center;
             justify-content: space-evenly;
-            margin-bottom: 10vh;
+            margin-top: 20vh;
+            margin-bottom: 20vh;
             .patients-blurb {
                 position: relative;
                 width: 80%;
@@ -304,6 +304,10 @@ $gray: #3D3D3D;
             }
             .patient-features {
                 width: 80%;
+                margin-bottom: 5vh;
+            }
+            img {
+                width: 70%;
             }
         }
 
