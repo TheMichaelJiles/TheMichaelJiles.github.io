@@ -12,6 +12,10 @@ $gray: #3D3D3D;
         display: none !important;
     }
 
+    .disable-scroll {
+        overflow:hidden;
+    }
+
     html {
         scroll-behavior: smooth;
     }
@@ -499,11 +503,6 @@ $gray: #3D3D3D;
             height: 115vh;
             align-items: center;
             margin-bottom: 10vh;
-
-            background-image: url(/assets/GreenPlus.svg);
-            background-repeat: no-repeat;
-            background-position: 160% 100%;
-            background-size: 70vw;
             .patients-blurb {
                 position: relative;
                 width: 80%;

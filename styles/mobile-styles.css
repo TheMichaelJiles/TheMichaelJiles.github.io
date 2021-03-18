@@ -2,6 +2,9 @@
   .mobile-hide {
     display: none !important;
   }
+  .disable-scroll {
+    overflow: hidden;
+  }
   html {
     scroll-behavior: smooth;
   }
@@ -598,10 +601,6 @@
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 10vh;
-    background-image: url(/assets/GreenPlus.svg);
-    background-repeat: no-repeat;
-    background-position: 160% 100%;
-    background-size: 70vw;
   }
   #content-section #patient-title-content .patients-blurb {
     position: relative;
