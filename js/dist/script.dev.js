@@ -202,6 +202,30 @@ function getPosition(el) {
   }
 
   return y;
+} //Shows the video player
+
+
+function showVideoForm() {
+  var dimmer = document.getElementById("dimmer");
+  var videoContainer = document.getElementById("video-container");
+  var videoInfoDialog = document.getElementById("video-info-dialog");
+  toggleMobileNav();
+  videoInfoDialog.style.display = "flex";
+  dimmer.classList.toggle("dimmer");
+  videoContainer.style.display = "flex";
+  document.body.style.overflowY = "hidden";
+  document.body.style.position = 'fixed';
+} //Hides the video player
+
+
+function hideVideoForm() {
+  var dimmer = document.getElementById("dimmer");
+  var videoContainer = document.getElementById("video-container");
+  videoContainer.style.display = "none";
+  dimmer.classList.toggle("dimmer");
+  document.body.style.overflowY = "visible";
+  document.body.style.position = '';
+  document.body.style.top = '';
 }
 
 var owl = $('.owl-carousel');

@@ -18,6 +18,28 @@
 <body>
     <div id="home-scroll-anchor"></div>
 
+    <div id="dimmer">
+	</div>
+	<div id="video-container" class="video-container">
+        <form id="video-info-dialog" action="php/email.php" method="post">
+        <h1>Before proceeding to the preview video, please provide the following information:</h1>
+        <div class="form_fields">
+            <input class="upper_form" name="firstname" placeholder=" First Name*" required>
+            <input class="upper_form" name="lastname" placeholder=" Last Name*" required>
+            <input class="upper_form" name="organization"placeholder=" Organization*" required>
+            <input class="upper_form" name="role" placeholder=" Role*" required>
+            <input class="upper_form"name="emailaddress" placeholder=" Email*" required>
+            <input class="upper_form" name="country" placeholder=" Country*" required>
+            <textarea name="message" placeholder=" Additional Information*" required></textarea>
+            <input type="hidden" name="formtype" value="Video" />
+        </div>
+        <div class="button-group">
+            <button type="button" name="cancel" id="video-cancel" onclick="hideVideoForm()">Cancel</button>
+            <button class="submit_button" name="submit" type="submit">Submit</button>
+        </div>
+        </form>
+    </div>
+
     <nav id="mobile-nav" class="desktop-hide hide-mobile-nav">
         <div class="nav-background">
             <div class="link-container flex-column">
@@ -28,7 +50,7 @@
                 <a href="#researchers-scroll-anchor" onclick="toggleMobileNav()">Researchers</a>
                 <a href="#clients-scroll-anchor" onclick="toggleMobileNav()">Partners</a>
                 <a href="#contact-scroll-anchor" onclick="toggleMobileNav()">Contact</a>
-                <a href="video.html">Watch Demo</a>
+                <a onclick="showVideoForm()">Watch Demo</a>
             </div>
         </div>
         <div id="mobile-nav-button" class="open-button" onclick="toggleMobileNav()"></div>
@@ -75,13 +97,13 @@
             <a href="#researchers-scroll-anchor">Researchers</a>
             <a href="#clients-scroll-anchor">Partners</a>
             <a href="#contact-scroll-anchor">Contact</a>
-            <a href="video.html" class="demo-button">Watch Demo</a>
+            <a onclick="showVideoForm()" class="demo-button">Watch Demo</a>
         </nav>
 
         <div class="scroll-anchor"></div>
 
         <div id="matrix-title-content">
-            <img class="landing-design" src="assets/NewLandingDesign.svg"></img>
+            <img class="landing-design" src="assets/LandingDesign.svg"></img>
             <div id="patient-title-reveal" class="co-create-container flex-column">
                 <h2>CO-CREATE & CO-DELIVER CARE</h2>
                 <div class="landing-header-container">
@@ -152,7 +174,7 @@
                     <li>Receive educational materials from foundations and researchers to stay up to date on the latest evidence</li>
                 </ul>
             </div>
-            <p>Typically, a rare disease patient has mutliple clinicians, and
+            <!-- <p>Typically, a rare disease patient has mutliple clinicians, and
                 Matrix helps bridge connectivity and continuity with all of them
                 by using the following methods and models:
             </p>
@@ -190,7 +212,7 @@
                         and integration called SMART on FHIR<sup>3</sup>.</p>
                 </div>
                 <img src="assets/Laptop.svg"></img>
-            </div>
+            </div> -->
         </div>
 
         <div id="pag-title-content" class="flex-column">
@@ -217,18 +239,16 @@
             <div id="researchers-scroll-anchor" class="scroll-anchor"></div>
             <img src="assets/Researchers.svg" class="green-line"></img>
             <div class="content-card">
-                <h2>Matrix can integrate into your 
-                patient and investigator network 
-                and allows for easy setup of trial/study.</h2>
+                <h2>Matrix can integrate into your patient and site networks to allow for easy execution of trials/studies</h2>
             </div>
             <div class="researcher-features">
                 <ul>
-                    <li>User Management: Patients, Caregivers, Physicians, Curators, and Researchers</li>
-                    <li>Messaging and Announcements</li>
-                    <li>Study Tools: Informed Consent Management, Case Report Form Editor, Study Mangement</li>
-                    <li>Tools, Expert access, and workflow to curate uploaded patient information</li>
-                    <li>Resource Center: store and disseminate educational or other materials</li>
-                    <li id="researchers-title-reveal">Population Analytics</li>
+                    <li>Researchers can come from both academic and industry backgrounds</li>
+                    <li>Generate and analyze various population-based analytics</li>
+                    <li>Directly message clinicians, patients, and caregivers</li>
+                    <li>Upload informed consents and build patient reported outcomes and site-based data collection</li>
+                    <li>Provide educational materials for patients, publications with latest evidence or standard of care, and upcoming studies/trials</li>
+                    <li id="researchers-title-reveal">Easily establish and sustain a patient registry and/or natural history study</li>
                 </ul>
             </div>
             <div id="clients-title-reveal" class="green-line"></div>
@@ -255,6 +275,7 @@
 
         <div id="contact-title-content" class="flex-column">
             <div id="contact-scroll-anchor" class="scroll-anchor"></div>
+            <h2>Built by:</h2>
             <img src="assets/logos/AcrossLogo.png">
             <div class="content-card across-content">
                 <p>Across Healthcare has a clear vision to empower the entire rare disease community 
@@ -263,8 +284,8 @@
                      Matrix.</p>
             </div>
             <div>
-                <h2>To learn more about Across Healthcare's Matrix platform, contact</h2>
-                <h2 class="orange">info@AcrossMatrix.com</h2>
+                <h2>To learn more about Across Healthcare's Matrix platform, contact us directly at</h2>
+                <h2><span class="orange">info@AcrossMatrix.com</span><span> or fill out the form below</span></h2>
             </div>
             <div class="contact-form">
                 <form id="email_form" action="php/email.php" method="POST">
