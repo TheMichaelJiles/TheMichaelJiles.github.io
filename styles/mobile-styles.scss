@@ -672,6 +672,22 @@ $gray: #3D3D3D;
             }
         }
 
+        #our-story-title-content {
+            margin: 0 auto;
+            position: relative;
+            margin-bottom: 10vh;
+            width: 80%;
+            padding: 2vh;
+            #our-story-scroll-anchor {
+                top: -15vh;
+            }
+            p {
+                width: 95%;
+                margin-left: 2%;
+                color: $gray;
+            }
+        }
+
         #clients-title-content {
             width: 95%;
             margin: 0 auto;

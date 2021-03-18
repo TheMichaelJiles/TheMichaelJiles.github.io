@@ -1,4 +1,5 @@
 <?php
+
 require_once __DIR__.'\sendgrid-php-main\sendgrid-php.php';
 
 use \SendGrid\Mail\Mail as SendMail;
@@ -36,7 +37,7 @@ function process() {
     $plainTextContent = new PlainTextContent(
         "Name: " .$firstname . " " . $lastname . "\n" .
         "Organization: " . $organization . "\n" .
-        "Country: " . $country . "\n" .
+        "EHR: " . $country . "\n" .
         "Role: " . $role . "\n" .
         "Message: " . $message . "\n" .
         "Email: " . $emailaddress
@@ -71,6 +72,12 @@ function process() {
 }
 
 $success = process();
-header('Location: ../video.html');
+if (trim($formtype) == trim("Video")) {
+    header('Location: ../video.html');
+} else if($success) {
+    header('Location: ../email-confirm.html');
+} else {
+    header('Location: ../email-failure.html');
+}
 
 ?>

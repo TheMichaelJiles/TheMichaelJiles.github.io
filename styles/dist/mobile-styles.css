@@ -650,6 +650,21 @@
     border-bottom: 1vw #75BD25 solid;
     width: 100%;
   }
+  #content-section #our-story-title-content {
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 10vh;
+    width: 80%;
+    padding: 2vh;
+  }
+  #content-section #our-story-title-content #our-story-scroll-anchor {
+    top: -15vh;
+  }
+  #content-section #our-story-title-content p {
+    width: 95%;
+    margin-left: 2%;
+    color: #3D3D3D;
+  }
   #content-section #clients-title-content {
     width: 95%;
     margin: 0 auto;

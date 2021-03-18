@@ -21,7 +21,7 @@
     <div id="dimmer">
 	</div>
 	<div id="video-container" class="video-container">
-        <form id="video-info-dialog" action="php/email.php" method="post">
+        <form id="video-info-dialog" action="php/email.php" method="POST">
         <h1>Before proceeding to the preview video, please provide the following information:</h1>
         <div class="form_fields">
             <input class="upper_form" name="firstname" placeholder=" First Name*" required>
@@ -48,6 +48,7 @@
                 <a href="#clinicians-scroll-anchor" onclick="toggleMobileNav()">Clinicians</a>
                 <a href="#pag-scroll-anchor" onclick="toggleMobileNav()">Foundations</a>
                 <a href="#researchers-scroll-anchor" onclick="toggleMobileNav()">Researchers</a>
+                <a href="#our-story-scroll-anchor" onclick="toggleMobileNav()">Our Story</a>
                 <a href="#clients-scroll-anchor" onclick="toggleMobileNav()">Partners</a>
                 <a href="#contact-scroll-anchor" onclick="toggleMobileNav()">Contact</a>
                 <a onclick="showVideoForm()">Watch Demo</a>
@@ -80,6 +81,9 @@
         <div id="researchers-title" class="title-container title-default animate__animated animate__faster hide">
             <h1>Researchers</h1>
         </div>
+        <div id="our-story-title" class="title-container title-default animate__animated animate__faster hide">
+            <h1>Our Story</h1>
+        </div>
         <div id="clients-title" class="title-container title-default animate__animated animate__faster hide">
             <h1>Partners</h1>
         </div>
@@ -95,6 +99,7 @@
             <a href="#clinicians-scroll-anchor">Clinicians</a>
             <a href="#pag-scroll-anchor">Foundations</a>
             <a href="#researchers-scroll-anchor">Researchers</a>
+            <a href="#our-story-scroll-anchor">Our Story</a>
             <a href="#clients-scroll-anchor">Partners</a>
             <a href="#contact-scroll-anchor">Contact</a>
             <a onclick="showVideoForm()" class="demo-button">Watch Demo</a>
@@ -174,45 +179,6 @@
                     <li>Receive educational materials from foundations and researchers to stay up to date on the latest evidence</li>
                 </ul>
             </div>
-            <!-- <p>Typically, a rare disease patient has mutliple clinicians, and
-                Matrix helps bridge connectivity and continuity with all of them
-                by using the following methods and models:
-            </p>
-            <div class="mobile-column-reverse clinician-block">
-                <div class="clinician-card">
-                    <h2 class="green-title">One Time Access Clinician</h2>
-                    <p>Through the patient’s Sharing Center, Matrix allows for 
-                        sharing of a timebound, password-protected link. This 
-                        link will allow read-only access to any patient-permissioned 
-                        data. This could be used at an urgent care clinic, emergency 
-                        department, or some other single-instance visit.</p>
-                </div>
-                <img src="assets/Connections.svg"></img>
-            </div>
-            <div class="clinician-block">
-                <img src="assets/Stethoscope.svg"></img>
-                <div class="clinician-card">
-                    <h2 class="orange-title">Regular Clinician</h2>
-                    <p>Matrix allows for provisioning of a Clinician user who can log into 
-                        the platform directly. Once activated as a physician, patients can 
-                        associate themselves with a clinician and share permissioned data. 
-                        This maybe used by a primary care clinician or other specialist whom 
-                        a patient frequently sees. These Clinicians can use Matrix to see 
-                        their entire patient population.</p>
-                </div>
-            </div>
-            <div class="mobile-column-reverse clinician-block">
-                <div id="pag-title-reveal" class="clinician-card">
-                    <h2 class="purple-title">Center of Excellence (COE) Clinician</h2>
-                    <p>With maturity of a rare disease, there are typically global centers 
-                        of excellence with leading Clinicians. At these COE sites, Matrix 
-                        can be embedded and will appear as a module within the Clinicians 
-                        EHR/EMR. Similar capabilities to the Regular Clinician model are 
-                        accessible and have a seamless flow from the EHR through a framework 
-                        and integration called SMART on FHIR<sup>3</sup>.</p>
-                </div>
-                <img src="assets/Laptop.svg"></img>
-            </div> -->
         </div>
 
         <div id="pag-title-content" class="flex-column">
@@ -248,11 +214,49 @@
                     <li>Directly message clinicians, patients, and caregivers</li>
                     <li>Upload informed consents and build patient reported outcomes and site-based data collection</li>
                     <li>Provide educational materials for patients, publications with latest evidence or standard of care, and upcoming studies/trials</li>
-                    <li id="researchers-title-reveal">Easily establish and sustain a patient registry and/or natural history study</li>
+                    <li id="our-story-title-reveal">Easily establish and sustain a patient registry and/or natural history study</li>
                 </ul>
             </div>
-            <div id="clients-title-reveal" class="green-line"></div>
+            <div class="green-line"></div>
         </div>
+
+        <div id="our-story-title-content" class="content-card">
+            <div class="scroll-anchor" id="our-story-scroll-anchor"></div>
+            <p>
+                Jason Colquitt remembers the exhaustion he felt playing football in high school. Despite repeated hospitalizations 
+                for what was thought to be severe dehydration and rhabdomyolysis—a breakdown of muscle from intense exercise—it was 
+                years before anyone considered these episodes as something more serious.  It would take a ten-day hospitalization 
+                for a doctor to tell Colquitt that such episodes were not normal, and that testing should be done to determine what 
+                was causing his episodes. Seventeen years ago, at the age of 32, Jason was diagnosed with the rare mitochondrial 
+                disorder carnitine palmitoyltransferase II deficiency.
+            </p><br>
+
+            <p>
+                Jason lives outside Atlanta, Georgia with his wife and four children.  He has been blessed to meet and work with 
+                many amazing people and organizations during his 20+ years in the healthcare technology field. His work has caused 
+                positive disruption within the healthcare industry as he has partnered with many organizations ranging from small 
+                start-ups to some of the world's largest health companies including Greenway Health, Walgreens/Boots Alliance, 
+                Quintiles, IQVIA, Cystic Fibrosus Foundation, Muscular Dystrophy Association, the American College of Surgeons, 
+                and many more. 
+            </p><br>
+
+            <p>
+                Today, Jason is CEO of Across Healthcare, which he founded in 2012 to envision, design, and deliver innovative 
+                technology solutions to organizations across the healthcare continuum. This includes supporting patient, provider,
+                 payor, and life sciences organizations.   In January 2019 at the JP Morgan Healthcare Conference Jason was awoken 
+                 to a clear vision to use his experiences and technical background to help the rare disease community.  Thus Matrix 
+                 was born.  It is Jason’s and the Across Healthcare’s hope and desire to use the Matrix platform to help care for 
+                 and cure rare diseases.
+            </p><br>
+
+            <p>
+                A Walt Whitman quote that says, “Perhaps you have been on [the road] since you were born and did not know” resonates
+                 with Jason. He believes that his journey has been used to bridge many relationships. As Jason looks forward, he is 
+                 grateful for all the paths he has crossed by working with people and organizations who can join him on his journey 
+                 to benefit others through the Matrix.
+            </p>
+        </div>
+        <div id="clients-title-reveal"></div>
 
         <div id="clients-title-content" class="flex-column">
             <div class="content-card quote-card">

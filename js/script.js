@@ -4,6 +4,7 @@ var patients = document.getElementById("patients-title");
 var clinicians = document.getElementById("clinicians-title");
 var pags = document.getElementById("pag-title");
 var researchers = document.getElementById("researchers-title");
+var ourstory = document.getElementById("our-story-title");
 var clients = document.getElementById("clients-title");
 var contact = document.getElementById("contact-title");
 
@@ -11,15 +12,17 @@ var patientContent = document.getElementById("patient-title-reveal");
 var cliniciansContent = document.getElementById("clinicians-title-reveal");
 var pagContent = document.getElementById("pag-title-reveal");
 var researchersContent = document.getElementById("researchers-title-reveal");
+var ourStoryContent = document.getElementById("our-story-title-reveal");
 var clientsContent = document.getElementById("clients-title-reveal");
 var contactContent = document.getElementById("contact-title-reveal");
 
-var titles = [matrix, patients, clinicians, pags, researchers, clients, contact];
+var titles = [matrix, patients, clinicians, pags, researchers, ourstory, clients, contact];
 var content = [Number.MIN_SAFE_INTEGER, 
     getPosition(patientContent), 
     getPosition(cliniciansContent), 
     getPosition(pagContent),
     getPosition(researchersContent),
+    getPosition(ourStoryContent),
     getPosition(clientsContent),
     getPosition(contactContent)];
 
