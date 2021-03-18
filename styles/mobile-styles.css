@@ -623,6 +623,9 @@
   #content-section #patient-title-content .patient-features {
     width: 90%;
   }
+  #content-section #patient-title-content img {
+    width: 40vh;
+  }
   #content-section #clinicians-title-content {
     display: -webkit-box;
     display: -ms-flexbox;
